@@ -24,9 +24,9 @@ module.exports = {
 		}, {
 			test: /\.css$/, // 一个刷选出需要处理文件的正则表达式
 			use: [{
-				loader: 'style-loader', // 将计算过后的样式加入页面中
+				loader: 'style-loader', // 将计算过后的样式加入页面中，能够使用类似@import和url(...)的方法实现require()的功能
 			}, {
-				loader: 'css-loader',// 能够使用类似@import和url(...)的方法实现require()的功能
+				loader: 'css-loader',// 加载.css文件
 				options: {
 					modules: true, // 指定启用css modules
 					localIdentName: '[name]_[local]--[hash:base64:5]', // 指定css的类名格式
@@ -44,7 +44,8 @@ module.exports = {
 	plugins: [ 
 	    new webpack.BannerPlugin('版权所有，翻版必究'),
         new HtmlWebpackPlugin({
-            template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+			title: 'webpack插件配置的标题',
+            template: __dirname + "/app/index.tmpl.html"  //new 一个这个插件的实例，并传入相关的参数
         })
 	]
 };

@@ -84,3 +84,13 @@ webpack-cli   此工具用于在命令行中运行 webpack
 
 
 ### 新增redux，用作数据管理
+public/                          
+  index.html                     #根页面，渲染模板
+app/                             #源码的文件夹
+  actions                        #描述数据变化
+  components                     #组件
+  constants                      #常量，目前包含action类型文件
+  containers                     #store数据注入组件
+  reducers                       #执行数据变化
+  store                          #store初始化文件
+  main.js                        #项目入口文件

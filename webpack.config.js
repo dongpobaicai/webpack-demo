@@ -43,10 +43,10 @@ module.exports = {
 		}],
 	},
 	plugins: [ 
-	    new webpack.BannerPlugin('版权所有，翻版必究'),
-        new HtmlWebpackPlugin({
-			title: 'webpack插件配置的标题',
-            template: __dirname + "/public/index.html"  //new 一个这个插件的实例，并传入相关的参数
-        })
+		new webpack.BannerPlugin('版权所有，翻版必究'),
+		new HtmlWebpackPlugin({
+				title: 'webpack插件配置的标题',
+				template: __dirname + "/public/index.html"  //new 一个这个插件的实例，并传入相关的参数
+		})
 	]
 };

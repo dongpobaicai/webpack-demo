@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      /*模拟对角线*/
+      .out {
+        border-top: 40px #d6d3d6 solid; /*上边框宽度等于表格第一行行高*/
+        width: 0px; /*让容器宽度为0*/
+        height: 0px; /*让容器高度为0*/
+        border-left: 80px #bdbabd solid; /*左边框宽度等于表格第一行第一格宽度*/
+        position: relative; /*让里面的两个子容器绝对定位*/
+      }
+      b {
+        font-style: normal;
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        width: 35px;
+      }
+      em {
+        font-style: normal;
+        display: block;
+        position: absolute;
+        top: -25px;
+        left: -70px;
+        width: 55x;
+      }
+    </style>
+    <title>测试内容</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="out">
+      <b>消费类型</b>
+      <em>通话类型</em>
+    </div>
+    <script src="./module_home.js"></script>
+    <script src="./module_search.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 // 默认配置项
 // module.exports = {
@@ -34,12 +35,12 @@ const path = require("path");
 // 对css进行处理  css-loader  style-loader
 
 module.exports = {
-  watch: true,
-  watchOptions: {
-    ignored: /node_modules/,
-    aggregateTimeout: 300, // 更新延迟时间
-    poll: 1000, // 轮询时间
-  }, // 配置文件监听
+  // watch: true,
+  // watchOptions: {
+  //   ignored: /node_modules/,
+  //   aggregateTimeout: 300, // 更新延迟时间
+  //   poll: 1000, // 轮询时间
+  // }, // 配置文件监听
   mode: "development",
   entry: {
     home: "./src/home.js",
@@ -77,5 +78,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    contentBase: "./dist",
+    hot: true,
+  },
 };

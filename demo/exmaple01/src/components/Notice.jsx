@@ -7,7 +7,6 @@ export default class Notice extends React.Component {
     return (
       <div>
         <div className="contain">测试组件</div>
-        <img src={require("../assert/test.png")} />
       </div>
     );
   }

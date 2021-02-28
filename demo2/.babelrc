@@ -1,0 +1,6 @@
+{
+    // 配置babel语法规则
+    "presets": [
+        "@babel/preset-env"
+    ]
+}
